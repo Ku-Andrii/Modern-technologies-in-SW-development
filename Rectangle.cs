@@ -1,26 +1,23 @@
-﻿namespace MTD_Laba_1
+namespace MTD_Laba_1
 {
     public class Rectangle : Figure
     {
-        private readonly ITemp _Temp;
+        private readonly float _a, _b;
 
-        public Rectangle(ITemp Temp)
+        public Rectangle(float a, float b)
         {
-            _Temp = Temp;
+            _a = a;
+            _b = b;
         }
 
-        public int Perimeter(int a, int b)
+        public int Perimeter()
         {
-            var result = 2 * (a + b);
-            _Temp.Temp(result);
-            return result;
+            return (int)(2 * (_a + _b));
         }
 
-        public int Area(int a, int b)
+        public override float Area()
         {
-            var result = a * b;
-            _Temp.Temp(result);
-            return result;
+            return _a * _b;
         }
     }
 }
