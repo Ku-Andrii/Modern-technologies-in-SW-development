@@ -1,26 +1,24 @@
-﻿namespace MTD_Laba_1
+namespace MTD_Laba_1
 {
     public class Parallelogram : Figure
     {
-        private readonly ITemp _Temp;
+        private readonly float _a, _b, _h;
 
-        public Parallelogram(ITemp Temp)
+        public Parallelogram(float a, float b, float h)
         {
-            _Temp = Temp;
+            _a = a;
+            _b = b;
+            _h = h;
         }
 
-        public int Perimeter(int a, int b)
+        public int Perimeter()
         {
-            var result = 2 * (a + b);
-            _Temp.Temp(result);
-            return result;
+            return (int)(2 * (_a + _b));
         }
 
-        public int Area(int a, int h)
+        public override float Area()
         {
-            var result = a * h;
-            _Temp.Temp(result);
-            return result;
+            return _a * _h;
         }
     }
 }
