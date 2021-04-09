@@ -1,26 +1,23 @@
-﻿namespace MTD_Laba_1
+namespace MTD_Laba_1
 {
     public class Rhombus : Figure
     {
-        private readonly ITemp _Temp;
+        private readonly float _a, _h;
 
-        public Rhombus(ITemp Temp)
+        public Rhombus(float a, float h)
         {
-            _Temp = Temp;
+            _a = a;
+            _h = h;
         }
 
-        public int Perimeter(int a)
+        public int Perimeter()
         {
-            var result = 4 * a;
-            _Temp.Temp(result);
-            return result;
+            return (int)(4 * _a);
         }
 
-        public int Area(int a, int h)
+        public override float Area()
         {
-            var result = a * h;
-            _Temp.Temp(result);
-            return result;
+            return _a * _h;
         }
     }
 }
