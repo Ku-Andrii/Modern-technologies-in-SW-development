@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace MTD_Laba_1
 {
@@ -12,23 +12,6 @@ namespace MTD_Laba_1
             Figure op = new Square();
             op.Show();
             Console.ReadKey();
-        }
-    }
-
-    public class Figure
-    {
-        public virtual void Show()
-        {
-            Console.WriteLine("Hi, I`m figure");
-        }
-    }
-
-    class Square : Figure
-    {
-        public override void Show()
-        {
-            base.Show();
-            Console.WriteLine("Hello, I`m square");
         }
     }
 }
